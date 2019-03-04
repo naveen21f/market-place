@@ -32,11 +32,12 @@ Raj and Jill are left unmatched. The above assumes preference to highest prices.
 
 #Steps:
 
-a. Spring-Boot Service runs on port 8181
-b. Angular dev runs on port 4200
-c. MongoDb port 27017
-d. MongoDb Database: market-place
+1. Spring-Boot Service runs on port 8181
+2. Angular dev runs on port 4200
+3. MongoDb port 27017
+4. MongoDb Database: market-place
 
 1. Do npm install for Angular App
+2. npm start for dev mode
 
 
