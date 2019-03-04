@@ -1,0 +1,33 @@
+<span *ngIf="isInfo" class="alert alert-info">
+  {{message}}
+</span>
+
+<div class="container">
+  <button (click)="loadBuySellMatch()" class="btn btn-info">Find Match</button>
+  <small><code>Result computed at {{timeStamp| date:'fullTime'}}</code></small>
+  <br>
+    <span><strong>- Matched -</strong></span>
+  <div *ngFor="let match of matches">
+    <strong>
+      <span style="color: green">{{match.buyer.name | titlecase}}</span>
+       -
+      <span style="color: red">{{match.seller.name | titlecase}}</span>
+    </strong>
+
+    <div style="margin-left: 100px">
+      <p>Buyer: {{match.buyer.name}} | {{match.buyer.price}}</p>
+      <p>Seller: {{match.seller.name}} | {{match.seller.price}}</p>
+    </div>
+  </div>
+
+  <hr>
+  <div style="text-align: center">
+    <span><strong>- UnMatched -</strong></span>
+
+
+    <div *ngFor="let order of unMatches">
+      {{order.name | titlecase}} | {{order.price}} | {{order.type}}
+    </div>
+  </div>
+  
+</div>
