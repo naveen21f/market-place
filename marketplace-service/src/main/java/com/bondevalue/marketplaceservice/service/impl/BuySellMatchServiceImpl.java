@@ -41,7 +41,9 @@ public class BuySellMatchServiceImpl implements BuySellMatchService {
     return computeMatch(buyOrders, sellOrders);
   }
 
+  @Override
   public Map computeMatch(List<Order> buyOrders, List<Order> sellOrders) {
+    LOGGER.info("SERVICE: request to computeMatch buy & sell orders");
     Map<String, List> matchMap = new HashMap<>(2);
     if (buyOrders == null || buyOrders.size() == 0) { //No Buy Orders Exist
       throw new MatchNotFoundException("No BUY Orders Exist");
